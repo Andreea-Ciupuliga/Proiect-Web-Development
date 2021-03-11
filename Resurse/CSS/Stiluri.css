@@ -1,0 +1,464 @@
+/*stiluri pt text*/
+
+.titlu {
+    color:darkslateblue;
+    font-size: 5vw;
+    font-family: 'Henny Penny', cursive;
+}
+
+
+h2
+{
+    color:darkorange;
+    font-size: 4vw;
+    font-family: 'Henny Penny', cursive;
+    counter-reset: subsection;
+}
+
+
+
+h2::before {
+    counter-increment: section;
+    content: counter(section) ".";
+}
+
+h3::before {
+    counter-increment:subsection;
+    content: counter(section) "." counter(subsection)" ";
+}
+
+
+h3
+{
+    color:lightseagreen;
+    font-size: 3vw;
+    font-family: 'Henny Penny', cursive;
+}
+
+p{
+    font-size: 2vw;
+    color: var(--culoare-text);
+}
+
+
+
+.imagine{
+    max-width: 100%;
+    margin-bottom: 40px;
+    margin-right: 20px
+}
+
+figcaption{
+    font-size: 2vw;
+    color: var(--culoare-text);
+}
+
+th,td{
+    border:1px solid black;
+    padding:5px;
+}
+td:empty{
+    padding:20px;
+}
+table{
+    border-collapse:collapse;
+    empty-cells:show;
+    font-size: 1.5vw;
+}
+
+.input_inline{
+    color:var(--culoare-text);
+}
+
+
+label{
+    color:var(--culoare-text);
+}
+
+div{
+    color: var(--culoare-text);
+}
+
+body.light{
+    /* obligatoriu sa inceapa cu -- */
+    --culoare-text: black;
+    --culoare-background: white;
+    background:var(--culoare-background);
+
+    font-family: 'Architects Daughter', cursive;
+    counter-reset: section;
+}
+
+
+
+body.dark{
+    --culoare-text: white;
+    --culoare-background: black;
+    background:var(--culoare-background);
+
+    font-family: 'Architects Daughter', cursive;
+    counter-reset: section;
+}
+
+
+
+
+
+.banner{
+    position:fixed;
+    font-size: 40px;
+    width: 100%;
+    bottom: 0;
+    border-style: solid;
+    border-color: green;
+    background-color: darkred;
+    animation: vinejos 6s linear 1 forwards;
+}
+
+
+@keyframes vinejos{
+    0%{transform: translateY(60px);}
+    25%{transform:translateY(-20px);}
+    35%{color: lightseagreen;}
+    50%{transform:translateY(0px);}
+
+    98%{opacity: 1;}
+    100%{opacity: 0;}
+}
+video::cue {
+    color:black;
+    background: white;
+    text-align: center;
+    alignment: top;
+
+}
+
+
+/*##########################################################################################################################################################*/
+
+
+/*Pentru grid-ul din galeria statica */
+#gr {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap:0.5em;
+    grid-column-gap:0.5em;
+}
+
+#gr img{
+    width: 100%;
+}
+
+#gr>figure:nth-child(5){
+    grid-area: 2/3/3/4;
+}
+
+#gr>figure:nth-child(6){
+    grid-area: 3/1/4/2;
+}
+#gr>figure:nth-child(7){
+    grid-area: 3/3/4/4;
+}
+
+#gr>figure:nth-child(8){
+    grid-area: 4/1/5/2;
+}
+
+#gr>figure:nth-child(9){
+    grid-area: 4/2/5/3;
+}
+
+#gr>figure:nth-child(10){
+    grid-area: 4/3/5/4;
+}
+
+.poza:hover
+{
+    transform: rotate(-10deg) scale(1.25);
+    border: solid 4px ;
+    transition-duration: 1.5s;
+}
+
+/*##############################################################################################################################################################*/
+
+/*Pentru meniu*/
+
+nav{
+    width:100%;
+    position:fixed;
+    background: black;
+    height:3rem;
+    top:0px;
+    left:0px;
+    font-family:Arial, Helvetica, sans-serif;
+    z-index:20;
+}
+ul.menu>li, ul.menu>li>ul.submenu>li{
+    display:block;
+    font-size:1rem;
+    font-weight:bold;
+    height:3rem;
+    line-height:3rem;
+    text-align:center;
+    list-style-type:none;
+    background: black;
+}
+ul.menu>li{
+    float:left;
+    width:13rem;
+}
+
+ul.menu>li>ul.submenu{
+    position:relative;
+    top:0px;
+}
+
+ul.menu>li>a,ul.menu>li>label,ul.submenu>li>a,ul.menu>li>label>a{
+    display:block;
+    height:	100%;
+    text-decoration:none;
+    color:white;
+    transition:all 0.5s linear;
+}
+
+
+/*ca sa apara efectul de umbra cand dau hover pe meniu*/
+ul.menu>li>label>a:hover,ul.menu label:hover{
+    box-shadow: inset 0 0 10px 10px rgba(211,211,211,0.7);
+}
+
+
+#hamburger{
+    display:none;
+    height:3rem;
+}
+#hamburger img{
+    height:100%;
+    width:auto;
+}
+#ch-menu,.ch-submenu{
+    display:none;
+}
+ul.submenu{
+
+    display:none;
+    padding:0;
+    margin:0;
+    text-indent:0;
+}
+
+ul.submenu>li>a{
+    transition: all 0.5s;
+}
+
+
+
+/*Pentru sageata care vinde din stanga la submeniu*/
+ul.submenu>li>a::before{
+    content: '→';
+    position: relative;
+    top: 0px;
+    left: -30px;
+    transition: 1s;
+    opacity:0;
+
+}
+ul.submenu>li>a:hover::before {
+    opacity: 1;
+    left: 0px;
+}
+
+
+/*pentru animatia cand apare submeniul si se lasa treptat in jos,nu brusc*/
+.ch-submenu:checked~ul.submenu{
+    display:block;
+
+    animation-fill-mode:forwards;
+    animation-duration:1.25s;
+    animation-name:apare_submeniu;
+    transform-origin:top;
+}
+@keyframes apare_submeniu{
+    0% {transform: scaleY(0);}
+    100%{transform: scaleY(1);}
+}
+
+/*ca sa nu afisez iconita de casuta*/
+#casuta{
+    display: none;
+}
+
+/*#########################################################################################################################################*/
+
+/*pentru cerinta cu tabelul cand ii coloram randurile*/
+
+table th{
+    background-color:white;
+}
+
+table tr:nth-child(odd) {
+    background-color:darkorange;
+}
+
+table tr:nth-child(even) {
+    background-color: blue;
+}
+
+table tr:hover td {
+    background-color:deepskyblue;
+}
+
+table tr:hover td[colspan]:last-of-type {
+    background-color: blue;
+}
+
+/*###########################################################################################################################################*/
+/*pentru ca sa afisam galeria animata*/
+
+#galerie_exemplu{
+    display: block;
+}
+
+/*#################################################################################################################################################################3*/
+/*pentru butonul cu sageata in sus care duce spre inceputul paginii*/
+#spre_inceputul_paginii {
+    position: fixed;
+    bottom: 5em;
+    opacity: 0.5;
+    right: 0.3em;
+    width: 3rem;
+    box-sizing: border-box;
+    height: 3rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border: 3px solid blue;
+    border-radius: 50%;
+    background: darkorange;
+    text-decoration: none;
+}
+
+#spre_inceputul_paginii:hover {
+    opacity: 1;
+}
+
+/*#############################################################################################################################################################*/
+/*Pentru layout*/
+
+#id_main
+{
+
+    padding-left:2em;
+    padding-right:2em;
+    padding-top:2em;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-areas: "gr-Ce_este_modelarea_3d      gr-Detalii_despre_programul_software_pe_care_il_vom_folosi     gr-Detalii_despre_programul_software_pe_care_il_vom_folosi   gr-Ce_vom_studia_in_aceste_tutoriale"
+                        " gr-Ce_este_modelarea_3d       gr-Detalii_despre_programul_software_pe_care_il_vom_folosi     gr-Detalii_despre_programul_software_pe_care_il_vom_folosi  gr-Ce_vom_studia_in_aceste_tutoriale"
+                         " gr-Ce_este_modelarea_3d       gr-Detalii_despre_programul_software_pe_care_il_vom_folosi     gr-Detalii_despre_programul_software_pe_care_il_vom_folosi  gr-Ce_vom_studia_in_aceste_tutoriale";
+}
+
+
+
+
+
+
+#Ce_este_modelarea_3d
+{
+    grid-area:gr-Ce_este_modelarea_3d ;
+}
+#Detalii_despre_programul_software_pe_care_il_vom_folosi
+{
+    grid-area:gr-Detalii_despre_programul_software_pe_care_il_vom_folosi;
+}
+
+#Ce_vom_studia_in_aceste_tutoriale
+{
+    grid-area: gr-Ce_vom_studia_in_aceste_tutoriale;
+
+}
+
+/*###################################################################################################################################################################*/
+
+/*pentru printare*/
+
+@media print
+{
+
+    .titlu {
+        color: black;
+        background:white;
+    }
+    h2
+    {
+        color: black;
+        background:white;
+    }
+
+    h3
+    {
+        color:black;
+        background:white;
+    }
+
+
+    img{
+        display:none; 
+    }
+
+    nav{
+        display: none;
+    }
+    #spre_inceputul_paginii{
+        display: none;
+    }
+    .banner{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        animation:none;
+    }
+    video{
+        display: none;
+    }
+    audio{
+        display: none;
+    }
+}
+
+/*################################################################################################################################################################################################################*/
+/*Pentru tema dark*/
+
+.sunButton{
+    background-image:url("../Imagini/soare.png");
+
+    width: 100px;
+    height:100px;
+
+    /*background-color: blue;
+    color: darkred;
+    width: 600px;
+    height: 200px*/
+
+}
+
+.moonButton{
+    background-image:url("../Imagini/luna.png");
+
+    width: 100px;
+    height:100px;
+
+    /*background-color: blue;
+    color: darkred;
+    width: 600px;
+    height: 200px*/
+
+}
+/*############################################################################################ FONT MARE PT NEVAZATORI ########################################################3 */
+
+html.FontDublu p{
+    font-size: 4vw;
+}
+
+

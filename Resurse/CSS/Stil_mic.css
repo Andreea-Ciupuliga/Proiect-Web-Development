@@ -1,0 +1,94 @@
+
+/*pentru galeria statica sa afiseze imaginile una sub alta*/
+#gr {
+    display:block;
+}
+/*##############################################################################################################################################3*/
+
+/*pentru meniu*/
+
+nav{
+    z-index:100;
+}
+
+#hamburger{
+    display:block;
+}
+
+ul.menu{
+    display:none;
+}
+
+#ch-menu:checked~ul.menu{
+    display:block;
+
+}
+
+ul.menu>li{
+    width:100%;
+    background:black;
+}
+ul.menu li:hover{
+    box-shadow: inset 0 0 10px 10px rgba(211,211,211,0.7);
+}
+
+/*sa nu mai afisam acasa ci sa afisam doar casuta*/
+#acasa{
+    display: none;
+}
+#casuta
+{
+    display: block;
+}
+/*ca sa se scaleze meniul din dreapta sus*/
+#ch-menu:checked~ul.menu{
+    display:block;
+    animation-fill-mode:forwards;
+    animation-duration:1s;
+    animation-name:scalare_meniu;
+    transform-origin:top left;
+}
+
+@keyframes scalare_meniu{
+    0% {transform: scaleY(0) scaleX(0);}
+    100%{transform: scaleY(1) scaleX(1);}
+}
+
+/*###############################################################################################################################################################*/
+/*pentru tabel cand vrem sa fie intr-un container cu scrollbar orizontal*/
+
+.container_tabel {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/*###############################################################################################################################################################*/
+
+/*ca sa nu afisam galeria animata*/
+
+#galerie_exemplu{
+    display: none;
+}
+
+/*#############################################################################################################################################################*/
+/*pentru layout*/
+
+#id_main
+{
+
+    padding-left:2em;
+    padding-right:2em;
+    padding-top:2em;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-template-areas: "gr-Ce_este_modelarea_3d "
+                        "  gr-Detalii_despre_programul_software_pe_care_il_vom_folosi  "
+                         " gr-Ce_vom_studia_in_aceste_tutoriale  ";
+
+}
+/*#################################################################################################################################################################*/
+/*ca sa nu afisez banner pe ecran mic*/
+.banner{
+    display: none;
+}

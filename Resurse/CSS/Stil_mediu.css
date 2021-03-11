@@ -1,0 +1,100 @@
+#gr {
+    grid-template-columns: repeat(2,1fr);
+}
+#gr>figure:nth-child(5){
+    grid-area: auto;
+}
+
+#gr>figure:nth-child(6){
+    grid-area: auto;
+}
+
+#gr>figure:nth-child(7){
+    grid-area: auto;
+}
+
+#gr>figure:nth-child(8){
+    grid-area: auto;
+}
+
+#gr>figure:nth-child(9){
+    grid-area: auto;
+}
+
+#gr>figure:nth-child(10){
+    grid-area: auto;
+}
+
+
+ul.menu>li{
+    font-size:12px;
+}
+
+#acasa{
+    display: none;
+}
+#casuta{
+    display: block;
+}
+
+#galerie_exemplu{
+    display: none;
+}
+
+
+
+
+
+
+/*####################################################################################################################################################################3*/
+/*pentru layout*/
+
+#id_main
+{
+
+    padding-left:2em;
+    padding-right:2em;
+    padding-top:2em;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-areas: "gr-Ce_este_modelarea_3d                        gr-Detalii_despre_programul_software_pe_care_il_vom_folosi     "
+                        " gr-Ce_este_modelarea_3d                        gr-Detalii_despre_programul_software_pe_care_il_vom_folosi     "
+                         " gr-Ce_este_modelarea_3d                        gr-Detalii_despre_programul_software_pe_care_il_vom_folosi    "
+                         " gr-Ce_vom_studia_in_aceste_tutoriale         gr-Detalii_despre_programul_software_pe_care_il_vom_folosi     "
+                         "  gr-Ce_vom_studia_in_aceste_tutoriale       gr-Detalii_despre_programul_software_pe_care_il_vom_folosi    "
+                         " gr-Ce_vom_studia_in_aceste_tutoriale          gr-Detalii_despre_programul_software_pe_care_il_vom_folosi     ";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

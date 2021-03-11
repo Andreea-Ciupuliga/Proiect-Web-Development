@@ -1,0 +1,314 @@
+WEBVTT
+
+
+1
+00:00:00.300 --> 00:00:03.700 line:0 align:middle
+So how do we navigate blender this may seem <i>intimidating</i>
+
+2
+00:00:03.700 --> 00:00:05.900 line:0 align:middle
+at first but it's actually pretty <i>simple</i>.
+
+3
+00:00:06.200 --> 00:00:08.200 line:0 align:middle
+Let's start with the 3D viewport.
+
+4
+00:00:08.700 --> 00:00:11.000 line:0 align:middle
+The first thing you'll be curious about is how to select
+
+5
+00:00:11.000 --> 00:00:12.600
+things simply left.
+
+6
+00:00:12.600 --> 00:00:15.900
+Click any object to select it and left click empty space
+
+7
+00:00:15.900 --> 00:00:16.700
+to deselect.
+
+8
+00:00:16.900 --> 00:00:20.700
+You can also press a to select all and ALT a to deselect
+
+9
+00:00:20.700 --> 00:00:24.200
+all some users may be interested in right-click select. which
+
+10
+00:00:24.200 --> 00:00:26.000
+is arguably better for your health.
+
+11
+00:00:26.000 --> 00:00:28.600
+So we made a separate video about that if you are curious
+
+12
+00:00:29.100 --> 00:00:32.000
+the next thing you want to To learn is the basics of navigation
+
+13
+00:00:32.400 --> 00:00:36.100
+how to rotate how to pan and how to zoom your perspective
+
+14
+00:00:36.100 --> 00:00:38.100
+of the viewport to do that.
+
+15
+00:00:38.100 --> 00:00:40.400
+All you need are these buttons right here.
+
+16
+00:00:40.800 --> 00:00:43.500
+So let's say we want to rotate around our Cube.
+
+17
+00:00:43.600 --> 00:00:44.000
+Luckily.
+
+18
+00:00:44.000 --> 00:00:47.200
+We have a very handy Gizmo in the top right of our viewport
+
+19
+00:00:47.200 --> 00:00:50.400
+that looks like this notice how it responds to our cursor
+
+20
+00:00:50.400 --> 00:00:52.000
+floating above each axis.
+
+21
+00:00:52.500 --> 00:00:55.400
+Go ahead and hover over the blue z-axis indicator and the
+
+22
+00:00:55.400 --> 00:00:58.000
+left click you'll notice that it brings you directly into
+
+23
+00:00:58.000 --> 00:00:59.800
+what's called top orthographic.
+
+24
+00:01:00.000 --> 00:01:03.400
+You this can be done for any axis to snap to its corresponding
+
+25
+00:01:03.400 --> 00:01:07.700
+perspective. However. if you instead click and drag the same
+
+26
+00:01:07.700 --> 00:01:11.100
+Gizmo. you'll find a much more flexible way of rotating your
+
+27
+00:01:11.100 --> 00:01:12.300
+view of the world.
+
+28
+00:01:12.400 --> 00:01:14.700
+It's important for some to know that you can also middle
+
+29
+00:01:14.700 --> 00:01:17.700
+click drag to achieve the same effect. but from any cursor
+
+30
+00:01:17.700 --> 00:01:20.700
+position now. you'll notice that our view seems to Pivot
+
+31
+00:01:20.700 --> 00:01:24.000
+around a particular point in the viewport that being the
+
+32
+00:01:24.000 --> 00:01:27.400
+center or origin of our grid this also happens to be where
+
+33
+00:01:27.400 --> 00:01:29.000
+our cube is at the moment.
+
+34
+00:01:29.200 --> 00:01:31.700
+However. what if we Didn't want to look at the cube.
+
+35
+00:01:31.700 --> 00:01:33.800
+What if we wanted to look over here or something?
+
+36
+00:01:34.200 --> 00:01:38.100
+Well now all you have to do is click this hand icon and drag
+
+37
+00:01:38.100 --> 00:01:40.800
+to where you want to have centered from there.
+
+38
+00:01:40.800 --> 00:01:43.100
+You'll notice your pivot has changed when you rotate your
+
+39
+00:01:43.100 --> 00:01:46.700
+perspective for hotkey users simply hold shift and middle
+
+40
+00:01:46.700 --> 00:01:49.700
+Mouse drag to achieve the same effect. but from any cursor
+
+41
+00:01:49.700 --> 00:01:53.300
+position. but let's say I want to focus back on my Cube again.
+
+42
+00:01:53.500 --> 00:01:54.400
+How do we do that?
+
+43
+00:01:54.400 --> 00:01:57.400
+Well for that I want to quickly show you the frame selected
+
+44
+00:01:57.400 --> 00:01:59.700
+tool which can be found under View.
+
+45
+00:02:00.000 --> 00:02:03.100
+This will reframe your perspective to focus on the object
+
+46
+00:02:03.100 --> 00:02:03.700
+or objects.
+
+47
+00:02:03.700 --> 00:02:04.800
+You have selected.
+
+48
+00:02:04.900 --> 00:02:08.100
+This can also be achieved by using the period key on a number
+
+49
+00:02:08.100 --> 00:02:11.000
+pad now that we're this close to our Cube.
+
+50
+00:02:11.000 --> 00:02:14.300
+You may be asking how do we zoom in and out but it's pretty
+
+51
+00:02:14.300 --> 00:02:17.500
+self-explanatory. We have a magnifying glass here click and
+
+52
+00:02:17.500 --> 00:02:20.800
+drag it to zoom in and out or you can use the scroll wheel
+
+53
+00:02:20.800 --> 00:02:24.100
+or plus and minus keys on the numpad to accomplish the same
+
+54
+00:02:24.100 --> 00:02:28.300
+task. And that's basically it for the basics of navigation.
+
+55
+00:02:28.500 --> 00:02:31.000
+But you may have noticed that we haven't used the other two
+
+56
+00:02:31.000 --> 00:02:35.700
+buttons in this area the camera icon and the grid icon the
+
+57
+00:02:35.700 --> 00:02:39.000
+camera icon will bring you into the eyes of your camera.
+
+58
+00:02:39.200 --> 00:02:42.200
+This is very helpful for setting up camera angles and previewing
+
+59
+00:02:42.200 --> 00:02:45.400
+what will eventually be your output image alternatively.
+
+60
+00:02:45.400 --> 00:02:48.100
+You can also use zero on the number pad.
+
+61
+00:02:49.100 --> 00:02:52.200
+The fourth button here is a grid this may confuse you at
+
+62
+00:02:52.200 --> 00:02:54.900
+first but this switch is your viewport between orthographic
+
+63
+00:02:54.900 --> 00:02:56.700
+mode and perspective mode.
+
+64
+00:02:56.800 --> 00:02:59.100
+I want ahead and set up a scene here to make it more obvious
+
+65
+00:02:59.100 --> 00:02:59.500
+to you.
+
+66
+00:02:59.900 --> 00:03:02.600
+But you may be asking what's the difference between these
+
+67
+00:03:02.600 --> 00:03:03.300
+two modes?
+
+68
+00:03:03.700 --> 00:03:07.000
+Well perspective mode is a realistic view of the 3D objects
+
+69
+00:03:07.000 --> 00:03:10.200
+in your scene. which takes into account how far away objects
+
+70
+00:03:10.200 --> 00:03:13.500
+are from you into how it displays the object the further
+
+71
+00:03:13.500 --> 00:03:18.100
+away. Something is the smaller it gets visually however orthographic
+
+72
+00:03:18.100 --> 00:03:21.100
+mode. URS all of that and flattens your world so that no
+
+73
+00:03:21.100 --> 00:03:24.700
+perspective is seen everything is angle perfect.
+
+74
+00:03:24.700 --> 00:03:27.700
+This is an unrealistic view but helps immensely with making
+
+75
+00:03:27.700 --> 00:03:31.300
+models accurate. especially in relation to say a 2d concept
+
+76
+00:03:31.300 --> 00:03:35.000
+sketch but that's just the viewport in the next video.
+
+77
+00:03:35.000 --> 00:03:36.900
+I'll be talking about all the different windows.
+
+78
+00:03:36.900 --> 00:03:40.800
+We see here what they do and how to navigate them as well.
