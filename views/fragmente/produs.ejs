@@ -1,0 +1,61 @@
+
+<article id="ent<%=locals.produs.id%>" class="<%=locals.produs.categorie%>">
+
+    <h3 class="nume">Nume:<a href="/produs/<%=locals.produs.id%>"> <%=locals.produs.nume%> </a></h3>
+
+    <img style="float: right;" src="<%=produs.imagine%>" alt="<%=produs.nume%>"/>
+
+
+
+
+
+
+<table class="container_tabel" >
+
+
+
+    <thead>
+    <tr>
+        <th>Pret:</th>
+        <th>Nivel:</th>
+        <th>Materiale:</th>
+        <th>Data fabricarii:</th>
+        <th>Disponibila in stoc</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td class="pret"><%=locals.produs.pret%></td>
+        <td class="nivel"><%=locals.produs.nivel%></td>
+        <td class="materiale"><%=locals.produs.materiale%></td>
+        <%
+        var luna = locals.produs.data_fabricarii.getMonth();
+        var zi = locals.produs.data_fabricarii.getDate();
+        var zi_sapt = locals.produs.data_fabricarii.getDay();
+        var an = locals.produs.data_fabricarii.getFullYear();
+        var lunile_anului = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie",
+            "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
+        var zilele_saptamanii = ['Duminica', 'Luni', 'Marti', 'Miercuri', 'Joi', 'Vineri', 'Sambata'];
+
+        var data_finala = zi+"("+zilele_saptamanii[zi_sapt]+")"+'/'+lunile_anului[luna]+'/'+an ;
+        var data_time = an + '-' + luna + '-' +zi;
+
+        %>
+
+        <td class="data"><time datetime="<%=data_time%>"><%=data_finala%></time></td>
+        <td class="disponibilitate_stoc"><%=locals.produs.disponibilitate_stoc%></td>
+    </tr>
+    </tbody>
+
+</table>
+
+    <p class="descriere">Descriere: <%=locals.produs.descriere%></p>
+    <p> Categorie: <span class="categorie"> <%=locals.produs.categorie%></span></p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</article>
+

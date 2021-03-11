@@ -1,0 +1,68 @@
+<!doctype html>
+<% if (locals.utilizator) { %>
+<html class="<%=locals.utilizator.problema_vedere%>">
+<%} else {%>
+<html>
+<%}%>
+<head>
+
+	<%- include("../fragmente/head.ejs") %>
+	<title>Home</title>
+</head>
+<body class="light" >
+
+<%- include("../fragmente/header.ejs") %>
+
+<main >
+
+
+	<section id="Capitol_1">
+
+		<h2>Introducere</h2>
+<div id="id_main">
+		<section id="Ce_este_modelarea_3d">
+			<h3>Ce este modelarea 3D</h3>
+			<p>Este procesul prin care producem un obiect tridimensional virtual folosind un program software specializat</p>
+			<p>Modelele 3D sunt utilizate pentru o varietate de domenii, inclusiv jocuri video, filme, arhitectură, ilustrație, inginerie.</p>
+			<p>Cateva exemple de programe software pentru modelare 3D:Maya,Houdini,Cinema 4D,Autodesk 3ds Max,Modo,Lightwave 3D,ZBrush,Blender,Daz Studio</p>
+		</section>
+
+		<section id="Detalii_despre_programul_software_pe_care_il_vom_folosi">
+			<h3> Detalii despre programul software pe care il vom folosi</h3>
+
+			<figure>
+
+				<picture>
+					<source media="(min-width:1000px)" srcset="Imagini/blender_logo.png">
+					<source media="(min-width:700px)" srcset="Imagini/blender_logo_mediu.png">
+					<source media="(min-width:300px)" srcset="Imagini/blender_logo_mic.png">
+					<img class="imagine" src="Imagini/blender_logo_mic.png" alt="Blender logo" title="Blender logo"/>
+				</picture>
+			</figure>
+
+			<p>Blender 3D este un software de grafică computerizată 3D gratuit și <b><i lang="en">open-source</i></b> folosit pentru crearea de filme animate, efecte vizuale, artă, modele printare 3D, aplicații interactive 3D, realitate virtuală și jocuri pe computer.</p>
+			<p>Caracteristicile lui includ:modelare 3D,<i lang="en">UV unwrapping</i>, texturare, editare grafică, <i lang="en">rigging și skinning</i>, simulare de fluid și fum, simulare de particule, sculptură, animare, randare, grafică în mișcare, editare video și compoziție. </p>
+			<p>Este scris in C,C++,Python</p>
+			<p>A fost creat pe 2 ianuarie 1994 ca o aplicatie <b><i lang="en">in-house</i></b> de studioul de animatie olandez NeoGeo </p>
+			<p>Numele Blender a fost inspirat de un cântec al trupei Yello, de pe albumul Baby</p>
+			<p>La 1 ianuarie 1998 Blender a fost lansat ca software liber(putea fi studiat, modificat, îmbunătățit și distribuit)</p>
+			<p>NeoGeo a dat faliment si blender a fost luat de compania Not a Number Technologies (fondata de Ton Roosendaal) care si ea a dat faliment in 2002</p>
+			<p>În mai 2002, Roosendaal a inceput fundația non-profit Blender.Acesta dorea sa gaseasca o modalitate de a continua să dezvolte și să promoveze Blender ca un proiect <b><i lang="en">open-source</i></b></p>
+			<p>Astăzi, Blender este un software gratuit și <b><i lang="en">open-source</i></b>.In mare masura este dezvoltat de comunitatea sa precum și de 15 angajați de la Blender Institute</p>
+			<p>O schimbare majora s-a produs cand a fost lansat Blender 2.8 care a adus multe schimbari si imbunatatiri fata de versiunile precedente </p>
+		</section>
+
+		<section id="Ce_vom_studia_in_aceste_tutoriale">
+			<h3>Ce vom studia in aceste tutoriale</h3>
+			<p>Ne vom concentra pe <b><i lang="en">workspace-urile</i></b> principale din Blender si vom explica fiecare ce contine si cum poate fi folosit</p>
+			<p>Vom examina <i lang="en">tool-urile</i> cele mai des folosite din aceste <i lang="en">workspace-uri</i> si vom observa cum sunt ele utilizate</p>
+		</section>
+</div>
+	</section>
+
+
+</main>
+
+<%- include("../fragmente/footer.ejs") %>
+</body>
+</html>

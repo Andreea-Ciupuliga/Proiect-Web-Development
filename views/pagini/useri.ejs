@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+	<title>Utilizatori</title>
+
+
+	<%- include("../fragmente/head") %>
+
+</head>
+<body class="container">
+
+<header>
+	<%- include("../fragmente/header") %>
+</header>
+
+<main>
+	<div class="afisaj">
+		<h1>Useri</h1>
+
+		<table id="admini">
+			<tr>
+				<th>id</th><th>username</th><th>fotografie</th><th>Problema Vedere</th><th>Comanda</th>
+			</tr>
+
+			<% for (var i = 0; i < useri.length; i++) {
+			if(useri[i].rol=="comun"){
+			%>
+				<tr>
+					<td><%= useri[i].id %></td>
+					<td><%= useri[i].username %></td>
+					<td>
+						<object data="<%= useri[i].fotografie %>" width="200" height="200">
+
+
+							<img width="200" height="200" src="Imagini/default-user-image.png" /></object>
+					</td>
+					<td><%= useri[i].problema_vedere %></td>
+					<td>
+						<form action="/sterge_utiliz" method="post">
+							<input type="hidden" name="id" value="<%= useri[i].id %>">
+							<input type="submit" value="Sterge poza">
+						</form>
+					</td>
+
+				</tr>
+
+			<% } %>
+			<% } %>
+		</table>
+	</div>
+</main>
+
+<footer>
+	<%- include("../fragmente/footer.ejs") %>
+</footer>
+
+</body>
+</html>

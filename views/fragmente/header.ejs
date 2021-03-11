@@ -1,0 +1,122 @@
+<header id="inceput">
+
+	<h1 class="titlu">Tutoriale de modelare 3D</h1>
+
+
+	<div class="afisaj">
+
+		<% if (!locals.utilizator) { %>
+
+			<p>Va rugam sa va logati: <br/>
+			<form id="login" method="post" action="/login">
+
+				<label>
+					Username: <input type="text" name="username" value="">
+				</label>
+				<label>
+					Parola: <input type="password" name="parola" value="">
+				</label>
+
+				<input type="submit" value="Submit">
+			</form>
+		<% } %>
+
+		<% if (locals.utilizator) { %>
+		<p>Iesire <a href="/logout" id="schimbareLogout" title="logout"><span id="hoverLogout"><%=locals.utilizator.username%></span></a></p>
+
+		<%  if (locals.utilizator.problema_vedere==1){ %>
+
+
+		<% } %>
+
+		<% } %>
+
+
+	</div>
+
+
+
+	<nav>
+		<input class="ch-submenu" type="checkbox" id="ch-menu">
+
+		<label id="hamburger" for="ch-menu">
+			<img src="/Imagini/Hamburger_icon_alb.png" alt="menu">
+		</label>
+
+		<ul class="menu">
+
+
+			<li id="casuta">
+				<label>
+				<a href="index"><i class="fas fa-home"></i></a>
+				</label>
+			</li>
+
+
+
+             <li id="acasa">
+				<label >
+					<a href="index">Acasa </a>
+				</label>
+			 </li>
+
+			<li>
+				<label for="submeniu_notiuni_introductive">
+					Notiuni introductive
+				</label>
+
+				<!--Am folosit un checkbox pentru inchiderea/deschiderea submeniului-->
+				<input class="ch-submenu" type="checkbox" id="submeniu_notiuni_introductive">
+				<ul class="submenu">
+					<li><a href="Notiuni_introductive.ejs#Capitol_2">Comenzile principale</a></li>
+					<li><a href="Notiuni_introductive.ejs#Capitol_3"><i lang="en">Tool-uri</i></a></li>
+				</ul>
+			</li>
+
+
+			<li>
+				<label for="opt_galerii">
+					Galerii
+				</label>
+				<!--Am folosit un checkbox pentru inchiderea/deschiderea submeniului-->
+				<input class="ch-submenu" type="checkbox" id="opt_galerii">
+				<ul class="submenu">
+					<li><a href="Galerie_statica">Galerie statica <span class="fas fa-camera"></span></a></li>
+					<li><a href="Galerie_animata">Galerie animata</a></li>
+				</ul>
+			</li>
+
+
+			<li>
+				<label>
+					<a href="produse">Produse</a>
+				</label>
+
+			</li>
+
+			<!-- testez ca utilizatorul e admin si are dreptul sa vada optiunea din meniu-->
+			<% if (locals.utilizator && locals.utilizator.rol=="admin") { %>
+			<li><a href="/useri">Utilizatori</a></li>
+			<% } %>
+
+
+			<li><a href="/inregistrare_user">User nou</a></li>
+			<% if (locals.utilizator) { %> <!-- testez ca utilizatorul e logat -->
+			<li><a href="/logout">Logout</a></li>
+			<% } %>
+
+		</ul>
+	</nav>
+
+
+	<% if (locals.utilizator) { %>
+		<p class="salut">salut, <%= locals.utilizator.username %>  </p>
+	<% } %>
+
+	<button id="toggleButton" onclick="f_pentru_buton()" class="moonButton"></button>
+
+
+
+
+</header>
+

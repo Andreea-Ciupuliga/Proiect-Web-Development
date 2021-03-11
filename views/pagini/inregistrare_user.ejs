@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <%- include("../fragmente/head.ejs") %>
+    <title>404</title>
+</head>
+<body class="light">
+
+<%- include("../fragmente/header.ejs") %>
+
+<main>
+
+    <div class="afisaj">
+        <h1>Inregistrare utilizator</h1>
+
+        </p>
+        <% if (locals.err !="") { %>
+            <form method="post" class="date"  action="/inreg" id="inregistrare" enctype="multipart/form-data" onsubmit="return validateForm()">
+                <p>
+                    <label>
+                        Username: <input type="text" name="username" required  value="">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Nume: <input type="text" name="nume" value="" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Prenume: <input type="text" name="prenume" value="" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+
+                        Parola: <input type="password" name="parola" id="parola" value="" required>
+
+                    </label>
+                    Parola să conțină minim o literă mare, o literă mică, 2 cifre și caracterul punct
+                </p>
+                <p>
+                    <label>
+                        Reintroduceti parola: <input type="password" name="rparola" id="reparola" value="" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Email: <input type="text" name="email" value=""  size="50" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+
+                        Problema vedere: <input type="checkbox" value="problema_vedere" name="problema_vedere">
+
+                    </label>
+
+                    <label>
+                        Fotografie: <input type="file" name="fotografie">
+                    </label>
+
+                </p>
+                <p>
+                    <input type="submit" value="Trimite">
+                    <input type="reset" value="Reseteaza">
+                </p>
+            </form>
+        <% } %>
+        <%- (locals.raspuns?locals.raspuns:"")+"<br/>"+(locals.err?locals.err:"")%>
+
+    </div>
+
+</main>
+
+<%- include("../fragmente/footer.ejs") %>
+</body>
+</html>

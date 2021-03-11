@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+	<%- include("../fragmente/head.ejs") %>
+	<title>Produse</title>
+</head>
+<body class="light">
+
+<%- include("../fragmente/header.ejs") %>
+
+<main>
+
+
+
+
+	<section>
+		<label> Nume produs:
+			<input id="i_text" type="text" value="">
+		</label>
+
+		<label for="i_range"> Pret minim:
+			10
+			<input type="range" id="i_pret" min="10" step="1" max="30" value="1">30 (selectat: <span id="info_range">1</span>)
+		</label>
+
+
+		<div class="input_inline"> Categorie:
+
+
+			<%
+			const distinct = (value, index, self) => {return self.indexOf(value) === index;}
+
+			var products = [];
+
+			for(let i=0;i<locals.produse.length;i++){
+				products.push(locals.produse[i].categorie);}
+			var distinct_products = products.filter(distinct);
+
+			for(let i=0;i<distinct_products.length;i++){
+			%>
+			<label><%=distinct_products[i]%>
+				<input id="i_rad<%=i+1%>" name="gr_rad" value="<%=distinct_products[i]%>" type="radio"/>
+			</label>
+
+			<%}%>
+
+			<label> Nimic
+				<input id="i_rad" name="gr_rad" checked value="nimic" type="radio"/>
+			</label>
+
+		</div>
+
+		<div class="input_inline">Disponibilitate stoc:
+
+
+
+			<label> Disponibile in stoc
+				<input id="i_check2" name="gr_chck" checked value="" type="checkbox"/>
+			</label>
+			<label> Nu disponibile in stoc
+				<input id="i_check3" name="gr_chck" checked value="" type="checkbox"/>
+			</label>
+
+
+
+		</div>
+
+		<label>Descriere:
+			<textarea id="i_textarea"></textarea>
+		</label>
+
+		<label>Nivel:
+
+
+			<select id="i_sel_simplu">
+
+				<option value="nimic">nimic</option>
+				<option value="comun">comun</option>
+				<option value="magic">magic</option>
+				<option value="relicva">relicva</option>
+
+			</select>
+		</label>
+
+
+		<label>Materiale:
+
+			<select id="i_sel_multiplu" multiple size="3">
+
+
+
+
+				<option value="aur"selected>aur</option>
+				<option value="rubin"selected>rubin</option>
+				<option value="metal"selected>metal</option>
+				<option value="safir"selected>safir</option>
+				<option value="smarald"selected>smarald</option>
+				<option value="material_textil"selected>material_textil</option>
+				<option value="lemn"selected>lemn</option>
+				<option value="topaz"selected>topaz</option>
+				<option value="ametist"selected>ametist</option>
+
+
+			</select>
+		</label>
+
+	</section>
+
+
+
+
+
+	<script src="Scripts/sortari.js"></script>
+
+	<%
+	var nume = [];
+	for(let i=0;i<locals.produse.length;i++){
+		nume.push(locals.produse[i].nume);
+
+	}
+	console.log(nume);
+	%>
+
+
+	<button id="filtrare">Filtreaza</button>
+	<button id="sort_asc">Sorteza crescator</button>
+	<button id="sort_desc">Sorteza descrescator</button>
+	<button id="average">Calculeaza</button>
+	<button id="resetare_filtre">Resetare filtre</button>
+
+
+
+
+
+
+<h2>Produse</h2>
+
+
+<section id="pentru_sortare">
+	<%for(let i=0;i<locals.produse.length;i++){%>
+		<%- include("../fragmente/produs.ejs",{produs:locals.produse[i]}) %>
+	<%}%>
+</section>
+
+
+
+
+
+
+</main>
+
+<%- include("../fragmente/footer.ejs") %>
+</body>
+</html>
